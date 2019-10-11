@@ -1,0 +1,304 @@
+{% extends 'basic.html' %}
+{% block title %}Punjabi Nawab | Online Booking Hotel{% endblock %}
+
+
+{% block body %}
+{% if msg %}
+<script>
+  alert(`{{msg}}`);
+  window.open('/','_self');
+</script>
+{% endif %}
+<style media="screen">
+  @media only screen and (min-width: 600px) {
+  #lg{
+    width:60%;
+  }
+  #lg1{
+margin-left:30%;
+  }
+}
+</style>
+<!-- Bnner Section -->
+<section class="banner-section" >
+    <div class="banner-carousel owl-carousel owl-theme">
+        <!-- Slide Item -->
+        <div class="slide-item">
+          <div class="image-layer" style="background-image: url(../static/s1.jpg);"></div>
+
+            <div class="auto-container">
+                <div class="content-box">
+                    <div class="title-box clearfix">
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h3>Punjabi Nawab Hotel</h3>
+                    </div>
+                    <h2>Balance of Luxury & Fun</h2>
+                    <h4>Modern Rooms Spacious Area & Fine Dining</h4>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide Item -->
+        <div class="slide-item">
+          <div class="image-layer" style="background-image: url(../static/s5.jpg);"></div>
+            <div class="auto-container">
+                <div class="content-box">
+                    <div class="title-box clearfix">
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h3>Punjabi Nawab Hotel</h3>
+                    </div>
+                    <h2>Its Beginning</h2>
+                    <h4>Your Satisfaction is our Priority</h4>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide Item -->
+        <div class="slide-item">
+          <div class="image-layer" style="background-image: url(../static/s3.jpg);"></div>
+            <div class="auto-container">
+                <div class="content-box">
+                    <div class="title-box clearfix">
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h3>Punjabi Nawab Hotel</h3>
+                    </div>
+                    <h2>Balance of Luxury & Fun</h2>
+                    <h4>Your Presence Makes Us Very Happy</h4>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Bnner Section -->
+
+<!-- Room Search Section -->
+
+<section class="room-search-section " >
+
+    <div class="auto-container" id="lg">
+        <div class="outer-box" >
+
+            <div class="room-search-form" >
+<div  id="lg1">
+                <form method="post" action="/hotel-in-ranchi" >{% csrf_token %}
+                    <div class="row">
+                        <!-- Form Group -->
+                        <div class="form-group check-info">
+                            <label>Check-In / out</label>
+            <div class="clearfix">
+              <input class="datepicker" type="text" id='sdate' name="sdate" placeholder="Arrival " autocomplete="off" required>
+              <input class="datepicker"  type="text" id='edate' name="edate" placeholder="Departure " autocomplete="off" required>
+            </div>
+                        </div>
+
+                        <!-- Form Group -->
+                        <div class="form-group text-center">
+                            <button type="submit" onclick="tab();" class="theme-btn btn-style-one" >Book Now</button>
+
+                        </div>
+                    </div>
+                </form>
+</div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--End Room Search Section -->
+
+
+<!-- Services Section -->
+<section class="services-section" style="margin-top:-5%;">
+    <div class="auto-container">
+        <div class="row">
+            <!-- Image Column -->
+            <div class="image-column col-lg-6 col-md-12 col-sm-12 wow fadeInLeft">
+                <div class="image-box">
+                    <div class="banner">
+                        <h2>Our Services</h2>
+
+                    </div>
+                    <figure class="image"><img src="../static/about/recpt.jpg" alt="" style="width:555px; height:340px;"></figure>
+                </div>
+            </div>
+
+            <div class="features-column col-lg-6 col-md-12 col-sm-12 wow fadeInRight">
+                <div class="inner-column">
+                    <!-- Feature block -->
+                    <div class="feature-block">
+                        <div class="inner-box">
+                            <div class="thumb-box"><img src="../static/about/rep1.png" alt=""></div>
+                            <h4>24 Hours Reception</h4>
+                            <div class="text">Punjabi Nawab offer our customers 24 hours reception service and also provides free breakfast</div>
+
+                        </div>
+                    </div>
+
+                    <!-- Feature block -->
+                    <div class="feature-block">
+                        <div class="inner-box">
+                            <div class="thumb-box"><img src="../static/about/park.jpg" alt=""></div>
+                            <h4>Free Car Parking</h4>
+                            <div class="text">One of the  budget hotel In Ranchi is about 100 m from the bus stand and just 2.5 km from railway station </div>
+                        </div>
+                    </div>
+
+                    <!-- Feature block -->
+                    <div class="feature-block">
+                        <div class="inner-box">
+                            <div class="thumb-box"><img src="../static/about/rest1.svg" alt="" style="height:70px;"></div>
+                            <h4>Inside Restaurant</h4>
+                            <div class="text">Punjabi Nawab offer our customers the best & fine dining experience never before</div>
+                        </div>
+                    </div>
+
+                    <!-- Feature block -->
+
+                </div>
+            </div>
+        </div>
+        <div class="other-features wow fadeInUp">
+            <div class="row">
+
+                <!-- Feature BLock Two -->
+                <div class="feature-block-two col-lg-4 col-md-6 col-sm-12">
+                    <div class="inner-box">
+                        <span class="icon flaticon-food"></span>
+                        <h4><a href="#">Free Breakfast</a></h4>
+
+                    </div>
+                </div>
+
+                <!-- Feature BLock Two -->
+                <div class="feature-block-two col-lg-4 col-md-6 col-sm-12">
+                    <div class="inner-box">
+                        <span class="icon flaticon-lamp-1"></span>
+                        <h4><a href="#">Premium Rooms</a></h4>
+
+                    </div>
+                </div>
+
+                <!-- Feature BLock Two -->
+                <div class="feature-block-two col-lg-4 col-md-6 col-sm-12">
+                    <div class="inner-box">
+                        <span class="icon flaticon-restaurant"></span>
+                        <h4><a href="#">Premium Restaurant</a></h4>
+
+                    </div>
+                </div>
+
+                <!-- Feature BLock Two -->
+
+
+                <!-- Feature BLock Two -->
+
+            </div>
+        </div>
+    </div>
+</section>
+<!--End Services Section -->
+
+<!-- Event And Video -->
+<section class="event-end-video">
+    <div class="outer-box clearfix">
+        <!-- Event Column -->
+        <div class="event-column">
+    <div class="image-layer" style="background-image: url(../static/about/airport1.jpg);"></div>
+            <div class="inner-column">
+                <div class="content-box">
+                    <h3>Ranchi Airport</h3>
+                    <span class="title">About 7 km </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Video Column -->
+        <div class="event-column">
+    <div class="image-layer" style="background-image: url(../static/about/railway.jpg);"></div>
+            <div class="inner-column">
+              <div class="content-box">
+                  <h3>Railway Station</h3>
+                  <span class="title">About 2.5 km </span>
+              </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--End Event And Video -->
+<!-- Gallery Section -->
+<section class="gallery-section">
+    <div class="auto-container">
+        <div class="sec-title text-center">
+            <h2>Photos Gallery</h2>
+            <span class="title">We offer customers the best & cheapest luxury rooms</span>
+        </div>
+    </div>
+
+    <div class="outer-container">
+        <div class="gallery-carousel owl-carousel owl-theme">
+{% for g in gallery %}
+    <!-- Gallery Block -->
+            <div class="gallery-block">
+                <div class="inner-box">
+                    <div class="image-box">
+                        <figure class="image"><a href="../media/{{g.img}}"><img src="../media/{{g.img}}" alt="" style="width:360px; height:280px;"></a></figure>
+          <!--Overlay Box-->
+          <div class="overlay-box">
+            <div class="overlay-inner">
+              <div class="content">
+                <a href="../media/{{g.img}}" class="link"><span class="icon fa fa-link"></span></a>
+                <a href="../media/{{g.img}}" data-fancybox="images" class="lightbox-image link"><span class="icon fa fa-search"></span></a>
+              </div>
+            </div>
+          </div>
+                    </div>
+                    <div class="caption-box">
+                        <h4><a href="about.html">{{g.nm}}</a></h4>
+
+                    </div>
+                </div>
+            </div>
+
+            {% endfor %}
+
+        </div>
+    </div>
+</section>
+<!--End Gallery Section -->
+
+{% endblock %}
+{% block js %}
+<script>
+  function tab(){
+    var d1=document.getElementById('sdate').value;
+    var d2=document.getElementById('edate').value;
+
+  localStorage.startdate=d1;
+  var d3 = localStorage.startdate;
+  localStorage.enddate=d2;
+  var d4 = localStorage.enddate;
+
+}
+  </script>
+
+{% endblock %}

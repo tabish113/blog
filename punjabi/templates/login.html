@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Punjabi Nawab | Register Now</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<!-- Custom Theme files -->
+<link href="../static/style.css" rel="stylesheet" type="text/css" media="all" />
+<!-- //Custom Theme files -->
+<!-- web font -->
+<link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
+<!-- //web font -->
+
+</head>
+<body>
+  {% if error %}
+   <script>
+     var er = `{{error}}`
+     alert(er);
+     </script>
+  {% endif %}
+  
+	<!-- main -->
+	<div class="main-w3layouts wrapper">
+		<h2 align="center" style="color:#fff;">Punjabi Nawab | <a href="/user-log" style="color:red; ">Register </a> </h2 >
+		<div class="main-agileinfo">
+			<div class="agileits-top">
+				<form action="login" method="POST">
+{% csrf_token %}
+
+          <input  type="text" name="unm" placeholder="Number" required>
+					<input  type="password" name="ps" placeholder="Password" required>
+
+
+					<div class="wthree-text">
+
+						<div class="clear"> </div>
+					</div>
+					<input type="submit"  value="Register">
+				</form>
+
+			</div>
+		</div>
+		<!-- copyright -->
+		<div class="colorlibcopy-agile">
+			<p>© 2019 IDA Punjabi Nawab LogIn Area. All rights reserved | Design by <a href="#" target="_blank">Punjabi Nawab</a></p>
+		</div>
+		<!-- //copyright -->
+		<ul class="colorlib-bubbles">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+	<!-- //main -->
+</body>
+</html>

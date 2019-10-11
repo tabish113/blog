@@ -1,0 +1,123 @@
+{% extends 'basic.html' %}
+{% block title %}Best Rooms In Ranchi{% endblock %}
+
+
+{% block body %}
+<style media="screen">
+  @media only screen and (min-width: 600px) {
+  #top113{
+margin-top:3%;
+  }
+}
+</style>
+<!-- Sidebar Page Container -->
+<div class="sidebar-page-container" id="top113">
+    <div class="auto-container">
+        <div class="row clearfix">
+            <!--Content Side-->
+            <div class="content-side col-xl-9 col-lg-8 col-md-12 col-sm-12">
+                <div class="room-detail">
+                  {% for i in data %}
+                    <div class="upper-box">
+                        <div class="carousel-outer wow fadeIn">
+                            <ul class="image-carousel owl-carousel owl-theme">
+                                <li><a href="images/resource/room-single-1.jpg" class="lightbox-image" data-fancybox="gallery" title="Image Caption Here"><img src="../../media/{{i.img1}}" style="width:830px; height:400px;" alt=""></a></li>
+                                <li><a href="images/resource/room-single-1.jpg" class="lightbox-image" data-fancybox="gallery" title="Image Caption Here"><img src="../../media/{{i.img2}}" style="width:830px; height:400px;" alt=""></a></li>
+                                <li><a href="images/resource/room-single-1.jpg" class="lightbox-image" data-fancybox="gallery" title="Image Caption Here"><img src="../../media/{{i.img3}}" style="width:830px; height:400px;" alt=""></a></li>
+                                <li><a href="images/resource/room-single-1.jpg" class="lightbox-image" data-fancybox="gallery" title="Image Caption Here"><img src="../../media/{{i.img4}}" style="width:830px; height:400px;" alt=""></a></li>
+                                <li><a href="images/resource/room-single-1.jpg" class="lightbox-image" data-fancybox="gallery" title="Image Caption Here"><img src="../../media/{{i.img5}}" style="width:830px; height:400px;" alt=""></a></li>
+                                <li><a href="images/resource/room-single-1.jpg" class="lightbox-image" data-fancybox="gallery" title="Image Caption Here"><img src="../../media/{{i.img6}}" style="width:830px; height:400px;" alt=""></a></li>
+
+
+                            </ul>
+
+                            <ul class="thumbs-carousel owl-carousel owl-theme">
+                                <li><img src="../../media/{{i.img1}}" alt=""></li>
+                                <li><img src="../../media/{{i.img2}}" alt=""></li>
+                                <li><img src="../../media/{{i.img3}}" alt=""></li>
+                                <li><img src="../../media/{{i.img4}}" alt=""></li>
+                                <li><img src="../../media/{{i.img5}}" alt=""></li>
+                                <li><img src="../../media/{{i.img6}}" alt=""></li>
+
+
+                            </ul>
+                        </div>
+
+                        <div class="room-info">
+                            <div class="inner clearfix">
+                                <ul class="info-list">
+                                    <li><i class="fa fa-couch"></i> Room Space: {{i.space}} sq-ft</li>
+                                    <li><i class="fa fa-bed"></i> Free Breakfast</li>
+                                    <li><i class="fa fa-user"></i> Max Guests: {{i.guest}}</li>
+                                </ul>
+
+                                <div class="price">
+                                    <h3>{{i.price}} / Night</h3>
+
+                                    <a href="/booking" class="theme-btn btn-style-one">book now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    <script>
+      localStorage.rid=`{{i.id}}`
+      localStorage.rnm=`{{i.nm}}`
+      localStorage.price=`{{i.price}}`
+
+      </script>
+
+{% endfor %}
+
+
+                </div>
+
+            </div>
+
+            <!--Sidebar Side-->
+            <div class="sidebar-side col-xl-3 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+                <aside class="sidebar">
+
+                    <!-- Booking Widget -->
+
+
+                    <!-- Help Box -->
+                    <div class="sidebar-widget help-box style-two">
+                        <div class="widget-content">
+                            <h4>Need Support?</h4>
+                            <ul>
+                                <li><i class="fa fa-phone-volume"></i> <a href="tel:1-258-985-703">1-258-985-703</a></li>
+                                <li><i class="far fa-envelope"></i><a href="mailto:info@kinghotel.com">info@kinghotel.com</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-widget help-box style-two">
+                        <div class="widget-content">
+                            <h4>Reach-Us</h4>
+                            <ul>
+                                <li><i class="fa fa-bus"></i> <a href="#">Bus Stand : 300 M</a></li>
+                                <li><i class="fa fa-train"></i><a href="#">Railway ST : 2.3 Km</a></li>
+                                <li><i class="fa fa-plane"></i><a href="#">Airport : 8.5 Km</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Category Widget -->
+
+
+                    <!-- Post Widget -->
+
+
+                </aside>
+            </div>
+        </div>
+    </div>
+</div>
+<!--End Blog Detail -->
+
+<!-- Subscribe Section -->
+
+<!--End Subscribe Section -->
+
+{% endblock %}

@@ -1,0 +1,176 @@
+{% extends 'basic.html' %}
+{% block title %}Best restaurant in ranchi | Punjabi Nawab{% endblock %}
+
+{% block body %}
+<style media="screen">
+  @media only screen and (min-width: 600px) {
+  #top113{
+margin-top:2%;
+  }
+}
+</style>
+<!-- Menu Section -->
+<section class="menu-section" id="top113">
+<div class="auto-container">
+    <div class="sec-title text-center">
+        <h2>Restaurant Menu</h2>
+        <span class="title">We offer our customers the best & fine dining experience never before</span>
+    </div>
+
+    <div class="menu-tabs">
+        <div class="tabs-box">
+            <ul class="tab-btns tab-buttons clearfix">
+                <li data-tab="#tab-1" class="tab-btn active-btn">Breakfast</li>
+                <li data-tab="#tab-2" class="tab-btn">Beverages</li>
+                <li data-tab="#tab-3" class="tab-btn">Veg-Starter</li>
+                <li data-tab="#tab-4" class="tab-btn">Non-Veg-Starter</li>
+                <li data-tab="#tab-5" class="tab-btn">Main Course</li>
+
+            </ul>
+
+            <!--Tabs Container-->
+            <div class="tabs-content">
+                <!--Tab / Active tab-->
+                <div class="tab active-tab" id="tab-1">
+                    <div class="row">
+                        <!-- Column -->
+                        {% for i in data %}
+                        {% if i.cat == 'Breakfast' %}
+                        <div class="column col-lg-6 col-md-12 col-sm-12">
+                            <div class="inner-column">
+                                <!-- Menu Block -->
+                                <div class="menu-item">
+                                    <div class="inner-box">
+                                        <span class="price">Rs {{i.price}}</span>
+                                        <h3><a href="#">{{i.nm}}</a></h3>
+
+                                    </div>
+                                </div>
+
+
+                                <!-- Menu Block -->
+
+                            </div>
+                        </div>
+
+                        {% endif %}
+                         {% endfor %}
+                    </div>
+                </div>
+
+                <!-- Tab -->
+                <div class="tab" id="tab-2">
+                    <div class="row">
+                        <!-- Column -->
+                        {% for i in data %}
+                        {% if i.cat == 'Beverages' %}
+                        <div class="column col-lg-6 col-md-12 col-sm-12">
+                            <div class="inner-column">
+                                <!-- Menu Block -->
+                                <div class="menu-item">
+                                    <div class="inner-box">
+                                        <span class="price">Rs {{i.price}}</span>
+                                        <h3><a href="#">{{i.nm}}</a></h3>
+
+                                    </div>
+                                </div>
+
+
+                                <!-- Menu Block -->
+
+                            </div>
+                        </div>
+
+                        {% endif %}
+                         {% endfor %}
+                        </div></div>
+
+                <!-- Tab -->
+                <div class="tab" id="tab-3">
+                    <div class="row">
+                        <!-- Column -->
+                        {% for i in data %}
+                        {% if i.cat == 'Starter' %}
+                        <div class="column col-lg-6 col-md-12 col-sm-12">
+                            <div class="inner-column">
+                                <!-- Menu Block -->
+                                <div class="menu-item">
+                                    <div class="inner-box">
+                                        <span class="price">Rs {{i.price}}</span>
+                                        <h3><a href="#">{{i.nm}}</a></h3>
+
+                                    </div>
+                                </div>
+
+
+                                <!-- Menu Block -->
+
+                            </div>
+                        </div>
+
+                        {% endif %}
+                         {% endfor %}
+
+                      </div></div>
+
+
+                <div class="tab" id="tab-4">
+                    <div class="row">
+                        <!-- Column -->
+                        {% for i in data %}
+                        {% if i.cat == 'nonveg' %}
+                        <div class="column col-lg-6 col-md-12 col-sm-12">
+                            <div class="inner-column">
+                                <!-- Menu Block -->
+                                <div class="menu-item">
+                                    <div class="inner-box">
+                                        <span class="price">Rs {{i.price}}</span>
+                                        <h3><a href="#">{{i.nm}}</a></h3>
+
+                                    </div>
+                                </div>
+
+
+                                <!-- Menu Block -->
+
+                            </div>
+                        </div>
+
+                        {% endif %}
+                         {% endfor %}
+</div></div>
+
+<div class="tab" id="tab-5">
+    <div class="row">
+        <!-- Column -->
+        {% for i in data %}
+        {% if i.cat == 'Main Course' %}
+        <div class="column col-lg-6 col-md-12 col-sm-12">
+            <div class="inner-column">
+                <!-- Menu Block -->
+                <div class="menu-item">
+                    <div class="inner-box">
+                        <span class="price">Rs {{i.price}}</span>
+                        <h3><a href="#">{{i.nm}}</a></h3>
+
+                    </div>
+                </div>
+
+
+                <!-- Menu Block -->
+
+            </div>
+        </div>
+
+        {% endif %}
+         {% endfor %}
+</div></div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+
+{% endblock %}

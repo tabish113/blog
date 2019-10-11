@@ -1,0 +1,164 @@
+{% extends 'basic1.html' %}
+
+
+{% block body %}
+{% if user.is_authenticated %}
+{% if msg %}
+<script>
+  alert(`{{msg}}`);
+  window.open('/user/add-room','_self');
+</script>
+{% endif %}
+<!-- start page content -->
+      <div class="page-content-wrapper">
+          <div class="page-content">
+              <div class="page-bar">
+                  <div class="page-title-breadcrumb">
+                      <div class=" pull-left">
+                          <div class="page-title">Add Rooms</div>
+                      </div>
+                      <ol class="breadcrumb page-breadcrumb pull-right">
+                          <li><i class="fa fa-home"></i>&nbsp;<a class="parent-item" href="index.html">Home</a>&nbsp;<i class="fa fa-angle-right"></i>
+                          </li>
+                          <li><a class="parent-item" href="#">Booking</a>&nbsp;<i class="fa fa-angle-right"></i>
+                          </li>
+                          <li class="active">Add Rooms</li>
+                      </ol>
+                  </div>
+              </div>
+               <div class="row">
+                  <div class="col-md-12">
+                      <div class="card card-box">
+                          <div class="card-head">
+                              <header>Add Rooms</header>
+                              <div class="tools">
+                                  <a class="fa fa-repeat btn-color box-refresh" href="javascript:;"></a>
+                                <a class="t-collapse btn-color fa fa-chevron-down" href="javascript:;"></a>
+                              </div>
+                          </div>
+                          <div class="card-body ">
+                              <div class="row p-b-20">
+                                  <div class="col-md-6 col-sm-6 col-6">
+                                      <div class="btn-group">
+                                          <a href="new-room" id="addRow" class="btn btn-info">
+                                              Add New <i class="fa fa-plus"></i>
+                                          </a>
+                                      </div>
+                                  </div>
+
+                              </div>
+                              <div class="table-scrollable">
+                              <table class="table table-hover table-checkable order-column full-width" id="example4">
+                                  <thead>
+                                      <tr>
+                                        <th class="center"> Name </th>
+                                          <th class="center">Room No </th>
+                                          <th class="center"> Price </th>
+                                          <th class="center"> Space </th>
+                                          <th class="center"> Guest </th>
+                                          <th class="center"> Img-1 </th>
+                                          <th class="center"> Img-2 </th>
+                                          <th class="center"> Img-3 </th>
+                                          <th class="center"> Img-4 </th>
+                                          <th class="center"> Img-5 </th>
+                                          <th class="center"> Img-6 </th>
+                                          <th class="center"> Action </th>
+
+
+                                      </tr>
+                                  </thead>
+                                  <tbody>
+                                    {% for i in data %}
+                <tr class="odd gradeX">
+
+                  <td class="center">{{i.nm}}</td>
+                  <td class="center">{{i.number}}</td>
+                  <td class="center">{{i.price}}</td>
+                  <td class="center">{{i.space}}</td>
+                  <td class="center">{{i.guest}}</td>
+                  <td class="center"><img src="../media/{{i.img1}}" alt="" style="width:100px; height:100px;"></td>
+                  <td class="center"><img src="../media/{{i.img2}}" alt="" style="width:100px; height:100px;"></td>
+                  <td class="center"><img src="../media/{{i.img3}}" alt="" style="width:100px; height:100px;"></td>
+                  <td class="center"><img src="../media/{{i.img4}}" alt="" style="width:100px; height:100px;"></td>
+                  <td class="center"><img src="../media/{{i.img5}}" alt="" style="width:100px; height:100px;"></td>
+                  <td class="center"><img src="../media/{{i.img6}}" alt="" style="width:100px; height:100px;"></td>
+
+
+
+                  <td class="center">
+                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#edit{{i.id}}">
+                       Edit
+                     </button>
+                    <a href="delete_room/{{i.id}}" class="btn btn-tbl-delete btn-xs">
+                      <i class="fa fa-trash-o "></i>
+                    </a>
+                  </td>
+
+                </tr>
+{% endfor %}
+              </tbody>
+                              </table>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <!-- Edit section -->
+      <!-- modal start -->
+      {% for i in data %}
+      <div class="modal fade" id="edit{{i.id}}" tabindex="-1" role="dialog" aria-labelledby="edit{{i.id}}Label" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+      <div class="modal-content">
+      <div class="modal-header">
+      <h5 class="modal-title btn btn-danger" id="edit{{i.id}}Label">Update....!</h5>
+
+      </div>
+      <div class="modal-body">
+        <form class=""  method="post" enctype="multipart/form-data">
+          {% csrf_token %}
+          <input type="hidden" name="id" value="{{i.id}}">
+          <!-- <input type="hidden" name="i1" value="{{i.img1}}">
+          <input type="hidden" name="i2" value="{{i.img2}}">
+          <input type="hidden" name="i3" value="{{i.img3}}">
+          <input type="hidden" name="i4" value="{{i.img4}}">
+          <input type="hidden" name="i5" value="{{i.img5}}">
+          <input type="hidden" name="i6" value="{{i.img6}}"> -->
+
+          <input type="text" name="nm" value="{{i.nm}}" style="width:100%; margin:2%;">
+          <input type="text" name="no" value="{{i.number}}" style="width:100%; margin:2%;">
+          <input type="text" name="price" value="{{i.price}}" style="width:100%; margin:2%;">
+          <input type="text" name="space" value="{{i.space}}" style="width:100%; margin:2%;">
+          <input type="text" name="guest" value="{{i.guest}}" style="width:100%; margin:2%;">
+          <!-- <input type="file" name="img1"  style="width:100%; margin:2%;">
+          <input type="file" name="img2"  style="width:100%; margin:2%;">
+          <input type="file" name="img3"  style="width:100%; margin:2%;">
+          <input type="file" name="img4"  style="width:100%; margin:2%;">
+          <input type="file" name="img5"  style="width:100%; margin:2%;">
+          <input type="file" name="img6"  style="width:100%; margin:2%;"> -->
+
+          <br>
+          <input type="submit" name="submit" value="Update" class="btn btn-primary" style="width:100%; margin:2%;">
+        </form>
+      </div>
+      <div class="modal-footer">
+
+
+      </div>
+      </div>
+      </div>
+      </div>
+      <!--end edit section  -->
+      {% endfor %}
+      <!-- modal end -->
+      {% else %}
+       <script>
+         alert('You are not Logged-In..!');
+         window.open('adminlogin','_self');
+         </script>
+         {% endif %}
+      <!-- end page content -->
+
+{% endblock %}

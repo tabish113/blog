@@ -1,0 +1,151 @@
+{% extends 'basic.html' %}
+{% block title %}Punjabi Nawab | Booking Section{% endblock %}
+
+{% block body %}
+{% if user.is_authenticated %}
+{% if thank %}
+<script>
+alert('Room Booked Successfully..!');
+window.open('/','_self');
+  </script>
+{% endif %}
+<style media="screen">
+  @media only screen and (min-width: 600px) {
+  #top113{
+margin-top:3%;
+  }
+}
+</style>
+<section class="booking-page-section" id="top113">
+        <div class="auto-container">
+            <div class="row">
+                <!-- Form Column -->
+                <div class="from-column col-lg-8 col-md-12 col-sm-12">
+                    <div class="inner-column">
+                        <div class="title">
+                            <h2></h2>
+                        </div>
+                         <div class="booking-form">
+                            <form method="post" action="booking">
+                              {% csrf_token %}
+                                <div class="row">
+                                    <div class="form-group col-lg-6 col-md-12 col-sm-12">
+                                        <label>Your Name *</label>
+                                        <input type="text" name="nm" value="{{user.first_name}}" required="" readonly>
+                                    </div>
+
+                                    <div class="form-group col-lg-6 col-md-12 col-sm-12">
+                                        <label>UID Number *</label>
+                                        <input type="text" name="uid" value="{{user.last_name}}" required readonly>
+                                    </div>
+
+                                    <div class="form-group col-lg-6 col-md-12 col-sm-12">
+                                        <label>Room Type *</label>
+                                        <input type="text" id="rnm1" name="rnm"  required="">
+                                    </div>
+
+                                    <div class="form-group col-lg-6 col-md-12 col-sm-12">
+                                        <label>Price *</label>
+                                        <input type="text" name="price" id="price1" required="">
+                                    </div>
+
+                                    <div class="form-group col-lg-6 col-md-12 col-sm-12">
+                                        <label>Arrival Date *</label>
+                                        <input type="text" id="startdate" value="" name="startdate" placeholder="Enter zipcode" required="">
+                                    </div>
+
+
+                                    <div class="form-group col-lg-6 col-md-12 col-sm-12">
+                                        <label>Departure Date *</label>
+                                        <input type="text"  id="enddate" name="enddate" placeholder="Departure Date" required="">
+                                        <input type="hidden" name="rid" id="rid1">
+                                        <input type="hidden" name="unm" value="{{user.username}}">
+
+
+                                    </div>
+
+
+                                    <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                                        <label>Address</label>
+                                        <textarea name="adds" >{{user.email}}</textarea>
+                                    </div>
+
+                                    <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                                        <button class="theme-btn btn-style-one" type="submit" style="width:100%;"><i class="fa fa-calendar" ></i>Book Now</button>
+                                    </div>
+
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+<!-- localStorage section -->
+<script>
+var startdate = localStorage.startdate
+var enddate = localStorage.enddate
+var rid = localStorage.rid
+var rnm = localStorage.rnm
+var price = localStorage.price
+
+document.getElementById("startdate").value = startdate;
+document.getElementById("enddate").value = enddate;
+document.getElementById("rid1").value = rid;
+document.getElementById("rnm1").value = rnm;
+document.getElementById("price1").value = price;
+
+
+  </script>
+<!-- localStorage section ends -->
+
+
+<div class="sidebar-side col-xl-3 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+    <aside class="sidebar">
+
+        <!-- Booking Widget -->
+
+
+        <!-- Help Box -->
+        <div class="sidebar-widget help-box style-two">
+            <div class="widget-content">
+                <h4>Need Support?</h4>
+                <ul>
+                    <li><i class="fa fa-phone-volume"></i> <a href="tel:1-258-985-703">1-258-985-703</a></li>
+                    <li><i class="far fa-envelope"></i><a href="mailto:info@kinghotel.com">info@kinghotel.com</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="sidebar-widget help-box style-two">
+            <div class="widget-content">
+                <h4>Reach-Us</h4>
+                <ul>
+                    <li><i class="fa fa-bus"></i> <a href="#">Bus Stand : 300 M</a></li>
+                    <li><i class="fa fa-train"></i><a href="#">Railway ST : 2.3 Km</a></li>
+                    <li><i class="fa fa-plane"></i><a href="#">Airport : 8.5 Km</a></li>
+
+                </ul>
+            </div>
+        </div>
+
+        <!-- Category Widget -->
+
+
+        <!-- Post Widget -->
+
+
+    </aside>
+</div>
+
+            </div>
+        </div>
+    </section>
+    {% else %}
+     <script>
+       alert('You are not Logged-In..!');
+       window.open('/login','_self');
+       </script>
+       {% endif %}
+    <!-- Booking page Section -->
+
+{% endblock %}

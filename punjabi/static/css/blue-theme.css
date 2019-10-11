@@ -1,0 +1,214 @@
+/* Blue Theme  */
+
+.blue-theme .main-header .header-top{
+	background-color: #f7fbfc;
+}
+
+.blue-theme .main-header .main-menu .navigation > li.current > a:before,
+.blue-theme .main-header .main-menu .navigation > li:hover > a:before,
+.blue-theme .main-header .main-menu .navigation > li.current > a,
+.blue-theme .main-header .main-menu .navigation > li:hover > a,
+.blue-theme .main-menu .navigation > li > ul > li:hover > a,
+.blue-theme .main-menu .navigation > li > ul > li > ul > li:hover > a,
+.blue-theme .main-header .top-right > ul > li > a:hover,
+.blue-theme .social-icon-one li a:hover,
+.nav-outer .mobile-nav-toggler,
+.mobile-menu .navigation li.current > a,
+.mobile-menu .navigation li > a:hover,
+.mobile-menu .social-links li a:hover,
+.mobile-menu-visible .mobile-menu .close-btn:hover,
+.blue-theme .about-section .image-column .image-box .logo .logo-txt .icon,
+.about-section .image-column .image-box .logo .logo-txt .big-txt{
+	color:#0bb4f3;
+}
+
+.blue-theme .btn-style-one,
+.blue-theme .main-header .language .dropdown-menu > li > a:hover,
+.mobile-menu .navigation li.dropdown .dropdown-btn.open,
+.mobile-menu .menu-backdrop{
+	background:#0bb4f3;
+	color:#ffffff;
+}
+
+.blue-theme .btn-style-two:hover,
+.mobile-menu .navigation li > a:before{
+	border-color:#0bb4f3;
+	background:#0bb4f3;	
+}
+
+.blue-theme .ui-state-active,
+.blue-theme .ui-widget-content .ui-state-active,
+.blue-theme .ui-widget-header .ui-state-active,
+.blue-theme a.ui-button:active, .ui-button:active,
+.blue-theme .ui-button.ui-state-active:hover{
+	border-color:#0bb4f3;
+	background:#0bb4f3;	
+}
+
+.blue-theme .main-header .language .dropdown-menu{
+	border-top-color:#0bb4f3;	
+}
+
+.blue-theme .btn-style-one:hover{
+	background-color: #222222;
+}
+
+.blue-theme .scroll-to-top:hover{
+	background-color: #0bb4f3;
+}
+
+.blue-theme .sec-title .title:after{
+	background-image: url(../images/icons/icon-right-2.png);
+}
+
+.blue-theme .sec-title .title:before{
+	background-image: url(../images/icons/icon-left-2.png);
+}
+
+.blue-theme .banner-section .content-box .title-box .rating{
+	color: #0bb4f3;
+}
+
+.blue-theme .banner-section .content-box .title-box:before{
+	background-image: url(../images/icons/icon-left-2.png);
+}
+
+.blue-theme .banner-section .content-box .title-box:after{
+	background-image: url(../images/icons/icon-right-2.png);
+}
+
+.blue-theme .about-section .content-column .title,
+.blue-theme .about-section .image-column .image-box .rating span,
+.blue-theme .about-section .content-column .features h3{
+	color: #0bb4f3;
+}
+
+.blue-theme .about-section .image-column .devider{
+	background-image: url(../images/icons/devider-2.png);
+}
+
+.blue-theme .about-section .content-column .title:before{
+	background-image: url(../images/icons/icon-left-2.png);
+}
+
+.blue-theme .rooms-section .room-block .lower-content h4 a:hover{
+	color: #0bb4f3;
+}
+
+.blue-theme .rooms-section .room-block .image-box .room-services li:hover{
+	background-color: #0bb4f3;
+}
+
+.blue-theme .rooms-section .rooms-carousel .owl-next:hover,
+.blue-theme .rooms-section .rooms-carousel .owl-prev:hover{
+	color: #0bb4f3;
+}
+
+.blue-theme .services-section .image-column .banner{
+	background-color: #0bb4f3;
+}
+
+.blue-theme .services-section .feature-block .inner-box h4 a:hover,
+.blue-theme .services-section .feature-block-two h4 a:hover,
+.blue-theme .services-section .feature-block-two .inner-box .icon{
+	color: #0bb4f3;
+}
+
+.blue-theme .event-end-video .video-column .link-box{
+	background-color: #0bb4f3;
+}
+
+.blue-theme .event-end-video .event-column .title:after{
+	background-image: url(../images/icons/icon-right-2.png);
+}
+
+.blue-theme .event-end-video .event-column .title:before{
+	background-image: url(../images/icons/icon-left-2.png);
+}
+
+.blue-theme .gallery-section .owl-prev:hover,
+.blue-theme .gallery-section .owl-next:hover,
+.blue-theme .gallery-section .gallery-block .caption-box h4 a:hover{
+	color: #0bb4f3;
+}
+
+.blue-theme .gallery-section .gallery-block .image-box .overlay-inner .link{
+	background-color:#0bb4f3;
+}
+
+.blue-theme .gallery-section .gallery-block .image-box .overlay-inner .link:hover{
+	background:#ffffff;	
+}
+
+.blue-theme .gallery-section .owl-dot.active,
+.blue-theme .gallery-section .owl-dot:hover{
+	background-color: #0bb4f3;
+}
+
+.blue-theme .menu-section .menu-tabs .tab-btns li.active-btn, 
+.blue-theme .menu-section .menu-tabs .tab-btns li:hover{
+	background-color: #0bb4f3;
+}
+
+.blue-theme .menu-section .menu-item .price{
+	color: #0bb4f3;
+}
+
+.blue-theme .offer-section .offer-block .image-box .title{
+	background-color: #0bb4f3;
+}
+
+.blue-theme .offer-section .offer-block .lower-content h4 a:hover{
+	color: #0bb4f3;
+}
+
+.blue-theme .news-section .news-block .image-box .image{
+	background-color:#0bb4f3;
+}
+
+.blue-theme .news-section .news-block .lower-content h3 a:hover,
+.blue-theme .news-section .news-block .lower-content .post-info li a:hover{
+	color: #0bb4f3;
+}
+
+.blue-theme .testimonial-section .testimonial-carousel .owl-prev:hover,
+.blue-theme .testimonial-section .testimonial-carousel .owl-next:hover,
+.blue-theme .testimonial-section .testimonial-block .info-box .name{
+	color: #0bb4f3;
+}
+
+.blue-theme .testimonial-section .testimonial-carousel .owl-dot.active,
+.blue-theme .testimonial-section .testimonial-carousel .owl-dot:hover{
+	background-color: #0bb4f3;
+}
+
+.blue-theme .subscribe-section .subscribe-form .form-group input:focus,	
+.blue-theme .subscribe-section .subscribe-form .form-group textarea:focus,
+.blue-theme .subscribe-section .subscribe-form .form-group select:focus{
+	border-color: #0bb4f3;
+}
+
+.blue-theme .contact-section .contact-form .form-group input:focus,	
+.blue-theme .contact-section .contact-form .form-group textarea:focus,
+.blue-theme .contact-section .contact-form .form-group select:focus{
+	border-color: #0bb4f3;
+}
+
+.blue-theme .contact-section .form-column .contact-btn a:hover{
+	color: #0bb4f3;
+}
+
+.blue-theme .main-footer .recent-posts .post h4 a:hover,
+.blue-theme .main-footer .links-widget .list li a:hover,
+.blue-theme .main-footer .about-widget .social-links li a:hover,
+.blue-theme .main-footer .about-widget .contact-info li a:hover{
+	color: #0bb4f3;
+}
+
+.blue-theme .main-footer .gallery-widget .image a:before{
+	background-color: #0bb4f3;
+}
+
+.blue-theme .main-footer .footer-column .widget-title:before{
+	background-image: url(../images/icons/icon-left-2.png);
+}

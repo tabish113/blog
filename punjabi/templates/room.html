@@ -1,0 +1,58 @@
+{% extends 'basic.html' %}
+{% block title %}Our Rooms | Best Rooms In Ranchi{% endblock %}
+
+{% block body %}
+
+<!--End Page Title-->
+<style media="screen">
+  @media only screen and (min-width: 600px) {
+  #top113{
+margin-top:2%;
+  }
+}
+</style>
+<!-- Room LIst Section -->
+<section class="room-list-section" id="top113">
+    <div class="auto-container" >
+
+        <!-- Room Block Two -->
+        {% for i in data %}
+
+        <div class="room-block-two wow fadeInUp" >
+            <div class="inner-box clearfix" >
+                <div class="image-box" >
+                    <figure class="image"><a href="room-detail.html"><img src="media/{{i.img1}}" style="width:360px;height:300px;" alt=""  ></a></figure>
+                     <ul class="room-services">
+                        <li><span class="fa fa-wifi"></span></li>
+                        <li><span class="fa fa-coffee"></span></li>
+                    </ul>
+                </div>
+                <div class="content-box" >
+                    <div class="inner" >
+                        <h3><a href="room-detail.html">{{i.nm}}</a></h3>
+<br>
+                        <ul class="info-box">
+                            <li><i class="fa fa-bed"></i> 1 Queen Size Bed</li>
+                            <li><i class="fa fa-user"></i> {{i.guest}} Max Guests</li>
+                            <li><i class="fa fa-square"></i> {{i.space}} sq-ft Room Space</li>
+
+                        </ul>
+
+                    </div>
+
+
+                </div>
+                <div class="price-box">
+                    <span class="price">{{i.price}} Rs / Night</span>
+                    <a href="/best-hotel-in-ranchi/{{i.id}}" class="theme-btn btn-style-one">view details</a>
+                </div>
+            </div>
+        </div>
+
+{% endfor %}
+
+    </div>
+</section>
+<!--End Room LIst Section -->
+
+{% endblock %}

@@ -1,0 +1,76 @@
+{% extends 'basic1.html' %}
+{% block body %}
+{% if user.is_authenticated %}
+{% if msg %}
+<script>
+  var msg=`{{msg}}`;
+  alert(msg);
+ window.open('add_restaurant','_self');
+  </script>
+{% endif %}
+<!-- start page content -->
+      <div class="page-content-wrapper">
+          <div class="page-content">
+
+               <div class="row">
+      <div class="col-sm-12">
+        <div class="card-box">
+          <div class="card-head">
+            <header>Add Restaurant</header>
+
+          </div>
+          <div class="card-body ">
+            <form class="" method='post' enctype="multipart/form-data">
+{% csrf_token %}
+                      <div class="row">
+
+                       <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                         <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Name</label>
+                         <input type="text" name="nm" placeholder=" Name" style="width:100%; margin-bottom:15px;" required>
+
+                       </div>
+                       <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+
+                         <input type="hidden" name="title" placeholder=" value="null" Title" style="width:100%; margin-bottom:15px;">
+
+                       </div>
+                       <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                         <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Price</label>
+                         <input type="text" name="price" placeholder=" Price" style="width:100%; margin-bottom:15px;" required>
+
+                       </div>
+                       <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                         <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Category</label>
+                         <select class="" name="cat">
+                           <option value="Breakfast">Breakfast</option>
+                           <option value="Beverages">Beverages</option>
+                           <option value="Starter">Starter</option>
+                           <option value="nonveg">Non-veg</option>
+                           <option value="Main Course">Main Course</option>
+
+                         </select>
+                       </div>
+
+
+
+  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+      <input type="submit" class="btn btn-primary " value="Submit" style="width:100%; margin-top:15px;">
+    </div>
+
+                      </div>
+
+</form>
+  </div>
+        </div>
+      </div>
+    </div>
+          </div>
+      </div>
+      {% else %}
+       <script>
+         alert('You are not Logged-In..!');
+         window.open('adminlogin','_self');
+         </script>
+         {% endif %}
+      <!-- end page content -->
+{% endblock %}

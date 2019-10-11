@@ -1,0 +1,666 @@
+/* King Hotel - Luxury Hotel HTML Template  */
+
+@media only screen and (max-width: 1280px){
+	.banner-carousel .owl-prev{
+		left: 15px;
+	}
+	.banner-carousel .owl-next{
+		right: 15px;
+	}
+
+	.about-section .content-column .feature{
+		margin-right: 50px;
+	}
+
+	.about-section .image-column .inner-column{
+		padding-left: 0;
+	}
+
+	.room-block-two .price-box {
+	    position: relative;
+	    float: right;
+	    background-color: transparent;
+	    padding: 0 20px;
+	}
+
+	.room-block-two .price-box .price{
+		float: left;
+		margin: 10px 10px 0 0;
+	}
+
+	.room-block-two .content-box .info-box{
+		margin-bottom: 10px;
+	}
+
+	.room-block-two .content-box .inner{
+		padding-left: 15px;
+		padding-top: 15px;
+	}
+
+	.event-table{
+		margin: 0 -15px;
+	}
+
+	.event-block{
+		float: left;
+		width: 50%;
+		padding: 0 15px;
+	}
+
+	.event-block .btn-column,
+	.event-block .info-column,
+	.event-block .image-column,
+	.event-block .content-column,
+	.event-block .date-column{
+		width: 100%;
+		max-width: 100%;
+		text-align: center;
+		float: none;
+	}
+
+	.event-block .info-column ul li,
+	.event-block .date-column span{
+		padding-left: 0;
+	}
+
+	.event-block .date-column{
+		margin-bottom: 15px;
+		padding-top: 0;
+	}
+
+	.event-block .content-column{
+		padding: 25px 15px 10px;
+		max-width: 350px;
+		margin: 0 auto !important;
+	}
+
+	.event-block .btn-column,
+	.event-block .info-column{
+		padding-top: 0;
+	}
+
+	.event-block .btn-column{
+		margin-top: 15px;
+	}
+
+	.event-block .info-column ul li i{
+		position: relative;
+		display: inline-block;
+	}
+
+	.blog-classic{
+		padding-right:0px;
+	}
+	
+	.about-spa .content-column .inner-column,
+	.event-detail .content-column .inner-column{
+		padding-right: 0;
+	}
+
+	.about-spa .lowe-content .image-column .inner-column{
+		padding-left: 0;
+	}
+}
+
+@media only screen and (min-width: 768px){
+	.main-menu .navigation > li > ul,
+	.main-menu .navigation > li > ul > li > ul{
+		display:block !important;
+		visibility:hidden;
+		opacity:0;
+	}
+}
+
+@media only screen and (max-width: 1023px){
+	.main-header.fixed-header .header-upper,
+	.main-header{
+		position: relative !important;
+	}
+
+	.main-header.alternate .header-upper{
+		background-color: #222222;
+		padding-top: 0;
+	}
+
+	.header-span,
+	.main-header .outer-box,
+	.main-header .top-left,
+	.nav-outer .main-menu{
+		display: none;
+	}
+	
+	.nav-outer .mobile-nav-toggler{
+		display:block;	
+	}
+
+	.main-footer .footer-logo figure{
+		margin-top: 0;
+	}
+
+	.main-header .outer-box{
+		float: right;
+	}
+
+	.main-menu .navigation > li{
+		margin-right: 20px;
+		padding: 20px 0 !important;
+	}
+
+	.banner-carousel h2{
+		font-size: 40px;
+		line-height: 1.2em;
+	}
+
+	.banner-carousel .content-box h4{
+		font-size: 24px;
+	}
+
+	.event-end-video .event-column,
+	.event-end-video .video-column{
+		position: relative;
+		width: 100%;
+	}
+
+	.event-end-video .video-column .inner-column,
+	.event-end-video .event-column .inner-column{
+		position: relative;
+		padding: 100px 0;
+	}
+
+	.services-section .features-column .inner-column{
+		padding-left: 0;
+	}
+
+	.banner-carousel .slide-item{
+		padding: 150px 0;
+	}
+
+	.room-search-section .outer-box{
+		padding: 30px 30px 10px;
+		margin-top: 0;
+	}
+
+	.room-search-form .form-group,
+	.room-search-form .form-group.check-info{
+		width: 50%;
+		margin-bottom: 30px;
+	}
+
+	.testimonial-block:before,
+	.gallery-section .owl-dots{
+		display: none;
+	}
+
+	.contact-section .form-column .contact-btn{
+		margin-bottom: 10px;
+	}
+
+	.blog-classic,
+	.about-section .content-column .inner-column,
+	.restt-service .content-column .inner,
+	.news-block-two .content-box .text{
+		padding-right: 0;
+	}
+
+	.gym-offers .services-column .inner-column,
+	.spa-offers .services-column .inner-column,
+	.booking-page-section .widget-column .inner-column,
+	.event-features .feature-column .inner-column,
+	.main-footer .gallery-widget{
+		padding-left: 0;
+	}
+
+	.gym-classes .content-column .inner-column,
+	.restt-service:nth-child(even) .content-column .inner{
+		padding: 0;
+	}
+
+	.restt-service:nth-child(odd) .image-column{
+		order: 0;
+	}
+
+	.room-block-two .content-box{
+		float: left;
+		width: 100%;
+	}
+
+	.room-block-two .price-box .price{
+		float: left;
+		width: 100%;
+		text-align: left;
+		margin-bottom: 20px;
+	}
+
+	.welcome-section .inner-container{
+		padding-left: 15px;
+		padding-right: 15px;
+		margin-top: 0;
+	}
+
+	.blog-detail .image-left,
+	.blog-detail .image-right,
+	.room-block-two .image-box{
+		width: 100%;
+	}
+
+	.room-block-two .price-box{
+		float: left;
+		margin-bottom: 20px;
+	}
+
+	.gym-video,
+	.page-title.style-two,
+	.page-title.style-three{
+		padding: 120px 0;
+	}
+	
+
+	.help-box ul li{
+		text-align: center;
+	}
+
+	.help-box ul li i{
+		position: relative;
+		display: inline-block;
+		float: none;
+	}
+
+	.about-spa .lowe-content{
+		padding-top: 70px;
+	}
+
+	.gym-offers .bottom-box,
+	.spa-offers .bottom-box{
+		text-align: left;
+	}
+}
+
+@media only screen and (max-width: 767px){	
+
+	.main-header .top-right > ul > li{
+		padding-left: 0;
+		border-left: 0;
+	}
+
+	.main-header .outer-box{
+		display: none;
+	}
+
+	.sec-title .title:before,
+	.sec-title .title:after,
+	.about-section .content-column h2 br{
+		display:none !important;	
+	}
+
+	.sec-title{
+		margin-bottom: 40px;
+	}
+
+
+	.event-detail .content-column h2,
+	.services-section .image-column .banner h2,
+	.about-section .content-column h2,
+	.sec-title h2{
+		font-size: 28px;
+		line-height: 1.3em;
+	}
+
+	.sec-title .title{
+		padding: 0;
+	}
+
+	.page-title h1{
+		font-size: 32px;
+		line-height: 1.3em;
+	}
+
+	.main-header .header-upper .nav-outer{
+		font-size: 20px;
+	}
+
+	.room-search-form .form-group,
+	.room-search-form .form-group.check-info{
+		width: 100%;
+	}
+
+	.services-section{
+		padding: 70px 0 15px;
+	}
+
+	.services-section .image-column .banner{
+		position: relative;
+		left: 0;
+		top: 0;
+		transform: none;
+	}
+
+	.services-section .image-column{
+		margin-bottom: 50px;
+	}
+
+	.subscribe-form .form-group input[type="submit"], 
+	.subscribe-form button{
+		width: 100%;
+	}
+
+	.testimonial-carousel .owl-dots{
+		max-width: 100%;
+	}
+
+	.styled-pagination li.empty,
+	.testimonial-carousel .owl-nav{
+		display: none;
+	}
+
+	.testimonial-section .sec-title,
+	.room-detail .similar-rooms .room-block{
+		margin-bottom: 40px;
+	}
+
+	.room-booking-form .advanced-booking{
+		text-align: left;
+	}
+
+	.room-feature-list li{
+		width: 50%;
+	}
+
+	.event-block{
+		width: 100%;
+	}
+
+	.news-block-two blockquote,
+	.blog-detail .news-block-two .text blockquote{
+		padding: 50px 15px;
+		text-align: center;
+	}
+
+	.news-block-two blockquote cite{
+		width: 100%;
+		text-align: center;
+	}
+
+	.news-block-two blockquote .icon{
+		position: relative;
+		left: 0;
+		top: 0;
+		width: 100%;
+		text-align: center;
+		margin-bottom: 10px;
+		display: block;
+	}
+
+	.menu-section{
+		padding-bottom: 70px;
+	}
+
+	.about-restaurent{
+		padding-top: 70px;
+	}
+
+	.spa-offers,
+	.gym-offers,
+	.room-grid-section,
+	.room-list-section,
+	.testimonial-section,
+	.event-section,
+	.gallery-section,
+	.contact-page-section,
+	.rooms-section{
+		padding: 70px 0;
+	}
+
+	.about-spa,
+	.sidebar-page-container,
+	.features-section,
+	.about-section{
+		padding: 70px 0 30px;
+	}
+
+	.event-detail,
+	.main-footer .widgets-section,
+	.about-gym{
+		padding: 70px 0 40px;
+	}
+
+	.subscribe-section{
+		padding: 70px 0 50px;
+	}
+
+	.spa-features,
+	.gym-features{
+		padding-bottom: 30px;
+	}
+
+	.restt-service .content-column,
+	.event-features .post-share-option{
+		margin: 0;
+	}
+	
+	.menu-tabs .tab-btns li{
+		margin:0px 0px 4px;
+	}
+	
+	.page-title.style-two,
+	.page-title.style-three{
+		padding: 80px 0;
+	}
+	
+	.page-title h1{
+		font-size:28px;	
+	}
+
+}
+
+@media only screen and (max-width: 599px){
+	
+	.banner-carousel h2{
+		font-size: 32px;
+		line-height: 1.2em;
+	}
+
+	.banner-carousel .content-box h4{
+		font-size: 16px;
+		line-height: 24px;
+	}
+	
+	.blog-detail .image-left{
+		margin-right:0px;
+	}
+	
+	.blog-detail .image-left img{
+		width:100%;
+		display:block;
+	}
+
+	.banner-carousel .content-box .title-box{
+		padding: 0;
+	}
+
+	.welcome-section h3,
+	.blog-detail .news-block-two .text blockquote p,
+	.event-end-video .video-column .link-box h2,
+	.event-end-video .event-column h3{
+		font-size: 24px;
+		line-height: 1.3em;
+	}
+
+	.spa-features .title h2:before,
+	.spa-features .title h2:after,
+	.main-header .top-right > ul > li.language,
+	.banner-carousel .content-box .title-box:after, 
+	.banner-carousel .content-box .title-box:before,
+	.main-header .top-right > ul > li:before,
+	.banner-carousel h2 br{
+		display: none;
+	}
+
+	.spa-features .title h2{
+		padding: 0;
+	}
+
+	.comments-area .comment{
+		padding-left: 0;
+	}
+
+	.comments-area .comment .author-thumb{
+		position: relative;
+		margin-bottom: 20px;
+	}
+
+
+	.main-header .top-right{
+		width: 100%;
+		padding: 10px 0;
+		text-align: center;
+	}
+	.main-header .top-right > ul > li{
+		margin-left: 0;
+		width: 100%;
+		padding: 0;
+	}
+
+	.main-header .top-right > ul > li i{
+		float: none;
+		display: inline-block;
+	}
+
+	.banner-carousel .title-box .rating{
+		width: 100%;
+		margin-right: 0;
+	}
+
+	.styled-pagination ul{
+		padding: 0 80px;
+		text-align: center;
+	}
+
+	.styled-pagination ul li{
+		float: none;
+		display: inline-block;
+		margin: 0 0 10px;
+	}
+
+	.comment-form .form-group input[type="submit"], 
+	.comment-form .form-group button,
+	.room-booking-form .form-group input[type="submit"], 
+	.room-booking-form button,
+	.room-feature-list li{
+		width: 100%;
+	}
+
+	.styled-pagination li.next,
+	.styled-pagination li.prev{
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+
+	.styled-pagination li.next{
+		left: auto;
+		right: 0;
+	}
+
+	.room-booking-form .advanced-booking{
+		text-align: center;
+	}
+
+	.room-detail .upper-box .price .theme-btn{
+		float: left;
+		margin-top: 5px;
+	}
+
+	.event-block .content-column h4{
+		font-size: 20px;
+		line-height: 1.4em;
+	}
+
+	.news-block-two .content-box .meta{
+		float: left;
+	}
+
+	.news-block-two .content-box .meta li:first-child{
+		margin-left: 0;
+	}
+
+	.gym-class .text,
+	.recent-posts,
+	.spa-service .content-box .text{
+		padding-right: 0;
+	}
+
+
+}
+
+
+@media only screen and (max-width: 479px) {
+
+	.news-block-two blockquote p,
+	.about-gym .content-column h3,
+	.gym-offers .services-column h3,
+	.gym-video .content-box .link-box h2,
+	.spa-offers .services-column h3,
+	.news-block-two .content-box h3,
+	.offer-block .image-box h3{
+		font-size: 24px;
+		line-height: 1.2em;
+	}
+
+	.room-detail .upper-box .room-info .inner,
+	.contact-page-section .info-column .inner-column,
+	.services-section .image-column .banner,
+	.menu-item .inner-box,
+	.about-section .image-column .image-box .inner-box,
+	.room-search-section .outer-box{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	.banner-carousel .link-box a{
+		margin-right: 0;
+	}
+
+	.room-block-two .content-box .info-box li{
+		display: block;
+	}
+
+	.menu-item .inner-box{
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.feature-block-three .inner-box{
+		padding: 0;
+	}
+
+	.about-section .content-column .feature{
+		margin-right: 0;
+		width: 100%;
+	}
+
+	.feature-block-two .inner-box,
+	.feature-block .inner-box{
+		padding-left: 0;
+		text-align: center;
+	}
+
+	.feature-block-two .inner-box .icon,
+	.feature-block .inner-box .thumb-box{
+		position: relative;
+		display: inline-block;
+		margin-bottom: 10px;
+	}
+
+	.menu-item .price{
+		position: relative;
+		left: 0;
+		top: 0;
+		margin-bottom: 10px;
+		display: inline-block;
+	}
+
+	.menu-tabs .tab-btns li{
+		width: 100%;
+		height: auto;
+	}
+}

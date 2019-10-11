@@ -1,0 +1,132 @@
+{% extends 'basic1.html' %}
+{% block body %}
+{% if thank %}
+<script>
+ alert('Room Added Successfully..!');
+ window.open('new-room','_self');
+  </script>
+{% endif %}
+<!-- start page content -->
+      <div class="page-content-wrapper">
+          <div class="page-content">
+
+               <div class="row">
+      <div class="col-sm-12">
+        <div class="card-box">
+          <div class="card-head">
+            <header>Add Room Details</header>
+
+          </div>
+          <div class="card-body ">
+            <form class="" method='post' enctype="multipart/form-data">
+{% csrf_token %}
+                      <div class="row">
+
+                       <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                         <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Name</label>
+                         <select class="custom-select my-1 mr-sm-2" name='nm' id="inlineFormCustomSelectPref">
+                         <option selected>Choose...</option>
+                         <option value="Deluxe Room">Deluxe Room</option>
+                         <option value="Semi Deluxe Room">Semi Deluxe Room</option>
+                         <option value="Standard Room">Standard Room</option>
+                         <option value="Single Room">Single Room</option>
+
+                         </select>
+
+                       </div>
+                       <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                         <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Room Number</label>
+                         <select class="custom-select my-1 mr-sm-2" name="number" id="inlineFormCustomSelectPref">
+                         <option selected>Choose...</option>
+                         <option value="101">101</option>
+                         <option value="102">102</option>
+                         <option value="201">201</option>
+                         <option value="202">202</option>
+                         <option value="203">203</option>
+                         <option value="204">204</option>
+                         <option value="205">205</option>
+                         <option value="206">206</option>
+                         <option value="207">207</option>
+                         <option value="301">301</option>
+                         <option value="302">302</option>
+                         <option value="303">303</option>
+                         <option value="304">304</option>
+                         <option value="305">305</option>
+                         <option value="306">306</option>
+                         <option value="307">307</option>
+                         <option value="308">308</option>
+
+                         </select>
+
+                       </div>
+
+                       <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                         <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Room Space</label>
+                         <select class="custom-select my-1 mr-sm-2" name="space" id="inlineFormCustomSelectPref">
+                         <option selected>Choose...</option>
+                         <option value="120">120 sq-ft</option>
+                         <option value="100">100 sq-ft</option>
+                         </select>
+
+                       </div>
+                       <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                         <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Max Guests</label>
+                         <select class="custom-select my-1 mr-sm-2" name="max" id="inlineFormCustomSelectPref">
+                         <option selected>Choose...</option>
+                         <option value="1">1</option>
+                         <option value="2">2</option>
+                         <option value="3">3</option>
+                         </select>
+
+                       </div>
+                       <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                         <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Price</label>
+                         <input type="text" name="price" placeholder=" Room Price" style="width:100%; margin-bottom:15px;">
+
+                       </div>
+
+                      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12"> <br>
+                        <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Image-1</label>
+                        <input type="file" class="custom-file-label" name="img1" style="width:95%;">
+
+                        </div>
+
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12"><br>
+                          <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Image-2</label>
+                          <input type="file" class="custom-file-label" name="img2" style="width:95%;">
+                          </div>
+
+                          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12"><br>
+                            <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Image-3</label>
+                            <input type="file" class="custom-file-label" name="img3" style="width:95%;">
+                            </div>
+
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12"><br>
+                              <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Image-4</label>
+                              <input type="file" class="custom-file-label" name="img4" style="width:95%;">
+                              </div>
+
+                              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12"><br>
+                                <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Image-5</label>
+                                <input type="file" class="custom-file-label" name="img5" style="width:95%;">
+                                </div>
+
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12"><br>
+                                  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Image-6</label>
+                                  <input type="file" class="custom-file-label" name="img6" style="width:95%;">
+                                  </div>
+  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+      <input type="submit" class="btn btn-primary " value="Submit" style="width:100%; margin-top:15px;">
+    </div>
+
+                      </div>
+
+</form>
+  </div>
+        </div>
+      </div>
+    </div>
+          </div>
+      </div>
+      <!-- end page content -->
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends 'basic1.html' %}
+{% block body %}
+{% if user.is_authenticated %}
+{% if thank %}
+<script>
+ alert('Gallery Added Successfully..!');
+ window.open('gallery','_self');
+  </script>
+{% endif %}
+<!-- start page content -->
+      <div class="page-content-wrapper">
+          <div class="page-content">
+
+               <div class="row">
+      <div class="col-sm-12">
+        <div class="card-box">
+          <div class="card-head">
+            <header>Add Gallery</header>
+
+          </div>
+          <div class="card-body ">
+            <form class="" method='post' enctype="multipart/form-data">
+{% csrf_token %}
+                      <div class="row">
+
+                       <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                         <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Name</label>
+                         <input type="text" name="nm" placeholder=" Name" style="width:100%; margin-bottom:15px;">
+
+                       </div>
+
+                      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+
+                        <input type="file" class="custom-file-label" name="img" style="width:100%;">
+
+                        </div><br><br>
+
+
+  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+      <input type="submit" class="btn btn-primary " value="Submit" style="width:100%; margin-top:15px;">
+    </div>
+
+                      </div>
+
+</form>
+  </div>
+        </div>
+      </div>
+    </div>
+          </div>
+      </div>
+      {% else %}
+       <script>
+         alert('You are not Logged-In..!');
+         window.open('adminlogin','_self');
+         </script>
+         {% endif %}
+      <!-- end page content -->
+{% endblock %}

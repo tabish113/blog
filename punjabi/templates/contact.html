@@ -1,0 +1,89 @@
+{% extends 'basic.html' %}
+{% block title %}Contact-Us | For Hotel Booking{% endblock %}
+
+{% block body %}
+{% if thank %}
+<script>
+  alert(`{{thank}}`);
+  window.open('contact','_self');
+</script>
+{% endif %}
+<style media="screen">
+  @media only screen and (min-width: 600px) {
+  #top113{
+margin-top:3%;
+  }
+}
+</style>
+<!-- Welcome Section -->
+
+<!--End Welcome Section -->
+
+<!-- Contact Page Section -->
+<section class="contact-page-section" id="top113">
+    <div class="auto-container">
+        <div class="row">
+            <!-- Form Column -->
+            <div class="form-column col-xl-8 col-lg-7 col-md-12 col-sm-12 ">
+                <div class="inner-column">
+                    <div class="title"><h4>Send Message</h4></div>
+                    <div class="contact-form">
+                        <form method="post"  id="contact-form">
+                          {% csrf_token %}
+                            <div class="row">
+                                <div class="form-group col-lg-6 col-md-12 col-sm-12">
+                                    <input type="text" name="nm" placeholder="Your Name" required="">
+                                </div>
+
+                                <div class="form-group col-lg-6 col-md-12 col-sm-12">
+                                    <input type="email" name="em" placeholder="Email" required="">
+                                </div>
+
+                                <div class="form-group col-lg-6 col-md-12 col-sm-12">
+                                    <input type="text" name="no" placeholder="Phone" required="">
+                                </div>
+
+                                <div class="form-group col-lg-6 col-md-12 col-sm-12">
+                                    <input type="text" name="sub" placeholder="Subject" required="">
+                                </div>
+
+                                <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                                    <textarea name="msg" placeholder="Message"></textarea>
+                                </div>
+
+                                <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                                    <button class="theme-btn btn-style-one" type="submit" name="submit-form">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Info Column -->
+            <div class="info-column col-xl-4 col-lg-5 col-md-12 col-sm-12 wow fadeInRight">
+                <div class="inner-column">
+                    <ul class="contact-info">
+                        <li><i class="fa fa-map-marker-alt"></i> Kanta Toli Chowk South Square Near Bus Stand, Ranchi - Purulia Rd, Ranchi, Jharkhand 834001</li>
+                        <li><i class="fa  fa-phone-volume"></i> <a href="tel:+1-258-980-7032">+91-7991137468</a></li>
+                        <li><i class="far fa-envelope"></i> <a href="mailto:support@king-hotel.com">info@punjabinawab.com</a></li>
+                        <li><i class="fa fa-globe"></i> <a href="#">www.hotel-domain.com</a></li>
+                    </ul>
+
+                    <ul class="social-icon-two clearfix">
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--End Contact Page Section -->
+
+
+{% endblock %}
